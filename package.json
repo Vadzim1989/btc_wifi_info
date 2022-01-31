@@ -1,0 +1,46 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Vadim Denisovski <vadim.denisovski@gmail.com>",
+  "dependencies": {
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-gyp": "^8.4.1",
+    "odbc": "^2.4.1",
+    "request": "^2.88.2"
+  },
+  "scripts": {
+    "client": "npm run start --prefix client",
+    "prod": "cross-env NODE_ENV=production node app.js",
+    "server": "nodemon app.js",
+    "secondserv": "node app.js",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\"",
+    "pm2": "pm2 start app.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^6.5.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5"
+  }
+}
