@@ -30,7 +30,7 @@
 <style>
     table{
         border-collapse: collapse;
-        max-width: 91vw;
+        max-width: 89vw;
         width: 100%;
         margin-left: 2%;
         margin-bottom: 20px;
@@ -85,7 +85,7 @@
     .table_wrapper {
         flex: 1 1 87%;
         overflow-y: auto;
-        width: 95vw;
+        width: 94vw;
         height: 88vh;
     }
 </style>

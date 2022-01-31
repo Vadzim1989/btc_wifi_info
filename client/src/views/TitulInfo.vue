@@ -24,7 +24,7 @@
                 filterYear: null
             }
         },
-        computed: {
+        computed: { 
             filteredTituls() {
                 if(!this.tituls.length) return this.tituls;
                 let fn = RegExp(`${this.filterName}|${this.en2ru(this.filterName)}`, 'i');
@@ -32,7 +32,7 @@
                     return (!fn || t.name_titul.match(fn)) &&
                         (!this.filterYear || t.god_vvod == this.filterYear);
                 })
-            }
+            } // filtered our data
         },
         watch: {
             $route: 'fetchData'
@@ -51,7 +51,7 @@
                     },100);
                 })
             },
-            en2ru: str => {  //qwerty => йцукенг
+            en2ru: str => {  //qwerty => йцукенг encoding en to rus
                 if(!str) return str;
                 let conv = {
                     ru: "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя",
