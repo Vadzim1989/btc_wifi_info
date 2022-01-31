@@ -1,5 +1,5 @@
 <template>
-    <Loader v-if="loading"/>      
+    <Loader v-if="loading"/>  
         <Table  v-else-if="tituls.length"
                 v-bind:tituls='tituls'
                 />
