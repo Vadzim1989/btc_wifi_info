@@ -1,9 +1,15 @@
 <template>
     <div class="table_wrapper">
+        <export-excel
+            class='btn_excel'
+            :data='tituls'
+            name='titulsInfo.xls'>
+            <img src="../assets/down_excel.png" alt="excel_download" class="down_logo">
+        </export-excel>
         <table>
             <TableHeader ref="thead"/>
             <tbody>
-                <TableBody 
+                <TableBodyRows 
                     v-bind:tituls='tituls'
                     v-for="tituls in tituls" :key="tituls.id_adr"/>
             </tbody>
@@ -15,13 +21,13 @@
 
 <script>
     import TableHeader from '@/components/TableHeader';
-    import TableBody from '@/components/TableBody';
+    import TableBodyRows from '@/components/TableBodyRows';
     import TableFooter from '@/components/TableFooter';
     export default {
         props: ['tituls'],
         components: {
             TableHeader,
-            TableBody,
+            TableBodyRows,
             TableFooter
         }
     }
@@ -32,7 +38,7 @@
         border-collapse: collapse;
         max-width: 89vw;
         width: 100%;
-        margin-left: 2%;
+        margin-left: 1.5%;
         margin-bottom: 20px;
         font-size: .7rem;
     }
@@ -87,5 +93,23 @@
         overflow-y: auto;
         width: 94vw;
         height: 88vh;
+    }
+    .btn_excel {
+        margin-left: 1%;
+        cursor: pointer;
+        max-width: 2%;
+    }
+    .btn_excel:hover {
+        transform: scale(1.2);
+        transition: .2s all ease;
+    }
+    .down_logo {
+        width: 80%;
+    }
+    @media screen and (max-width:1850px){
+        table {
+            font-size: .65rem;
+            margin-left: 0;
+        }
     }
 </style>

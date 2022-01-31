@@ -10,7 +10,7 @@
                         v-model="$parent.$parent.filterName"
                         @keydown.esc="$parent.$parent.filterName=''"></th>
             <th><input  type="number" 
-                        placeholder="Год ввода"
+                        placeholder="Год"
                         min="2000"
                         v-mfocus
                         v-model.number="$parent.$parent.filterYear"
@@ -40,5 +40,8 @@
     input[type=number]::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
+    }
+    input::placeholder {
+        font-size: 85%;
     }
 </style>

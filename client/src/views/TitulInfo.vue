@@ -29,8 +29,7 @@
                 if(!this.tituls.length) return this.tituls;
                 let fn = RegExp(`${this.filterName}|${this.en2ru(this.filterName)}`, 'i');
                 return this.tituls.filter(t => {
-                    return (!fn || t.name_titul.match(fn)) &&
-                        (!this.filterYear || t.god_vvod == this.filterYear);
+                    return (!fn || t.name_titul.match(fn)) && (!this.filterYear || t.god_vvod == this.filterYear);
                 })
             } // filtered our data
         },

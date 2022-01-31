@@ -64,4 +64,18 @@
         font-weight: 500;
         border-left: 5px solid #88d359;
     }
+    @media screen and (max-width:1850px){
+        li {
+            font-size: .6rem;
+        }
+        ul {
+            width: 8.5vw;
+        }
+        li a {
+            padding: 1% 2%;
+        }
+        .nav_wrapper {
+            margin-right: 1%;
+        }
+    }
 </style>

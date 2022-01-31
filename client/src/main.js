@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import excel from 'vue-excel-export'
 
 Vue.config.productionTip = false
+Vue.use(excel);
+
 
 // Регистрируем глобальную пользовательскую директиву `v-afocus`
 Vue.directive("afocus", {
