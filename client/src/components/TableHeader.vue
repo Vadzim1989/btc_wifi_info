@@ -1,16 +1,21 @@
 <template>
-    <thead>
+    <thead ref="thead">
         <tr>
             <th>№ титула</th>
             <th>Район</th>
             <th><input  type="text" 
                         placeholder="Имя титула"
-                        @mouseover="mouseOver"
-                        v-model="filter"></th>
+                        v-afocus
+                        v-mfocus
+                        v-model="$parent.$parent.filterName"
+                        @keydown.esc="$parent.$parent.filterName=''"></th>
             <th><input  type="number" 
                         placeholder="Год ввода"
-                        @mouseover="mouseOver"
-                        v-model="filter"></th>
+                        min="2000"
+                        v-mfocus
+                        v-model.number="$parent.$parent.filterYear"
+                        @keydown.esc="$parent.$parent.filterYear=''"
+                        ></th>
             <th>Всего розеток</th>
             <th>Занято розеток</th>
             <th>Всего квартир</th>
@@ -26,26 +31,6 @@
         </tr>
     </thead>
 </template>
-
-<script>
-export default {
-    data() {
-        return {
-            filter: ''
-        }
-    },
-    watch: {
-        filter(value) {
-            console.log(value)
-        }
-    },
-    methods: {
-        mouseOver(e) {
-            e.currentTarget.select()
-        }
-    }
-}
-</script>
 
 <style scoped>
     input {

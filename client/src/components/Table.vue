@@ -1,7 +1,7 @@
 <template>
     <div class="table_wrapper">
         <table>
-            <TableHeader/>
+            <TableHeader ref="thead"/>
             <tbody>
                 <TableBody 
                     v-bind:tituls='tituls'

@@ -4,6 +4,25 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+// Регистрируем глобальную пользовательскую директиву `v-afocus`
+Vue.directive("afocus", {
+  // Когда привязанный элемент вставлен в DOM...
+  inserted: function (el) {
+    // Переключаем фокус на элемент
+    el.focus();
+    // el.select();
+  }
+})//Vd
+// Регистрируем глобальную пользовательскую директиву `v-mfocus`
+Vue.directive("mfocus", {
+  inserted:
+    // Переключаем фокус на элемент и выделяем при наведении (при v-mfocus:select)
+    (el, binding) => el.onmouseover = () => {
+      el.focus();
+      binding.arg=="select" && el.select();
+    }
+})//Vd
+
 new Vue({
   router,
   render: h => h(App),
