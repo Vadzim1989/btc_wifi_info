@@ -16,8 +16,7 @@
     "prod": "cross-env NODE_ENV=production node app.js",
     "server": "nodemon app.js",
     "secondserv": "node app.js",
-    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\"",
-    "pm2": "pm2 start app.js"
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": [
