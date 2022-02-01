@@ -7,7 +7,7 @@
     </div>
 </template>
 
-<style scoped>
+<style>
     .not_page_wrapper {
         background: rgb(174,214,238);
         background: radial-gradient(circle, rgba(174,214,238,1) 0%, rgba(148,233,232,1) 100%);
@@ -31,5 +31,10 @@
     .not_page a:hover {
         background-color: #94fd94;
         color: black;
+    }
+    @media screen and (max-width:1840px) {
+        .not_page_wrapper {
+            margin-top: 5%;
+        }
     }
 </style>

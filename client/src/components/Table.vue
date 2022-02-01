@@ -113,8 +113,14 @@
             font-size: .6rem;
             margin-left: 0;
         }
+        .table_wrapper {
+            width: 91vw;
+        }
         .tdNum {
             font-size: .6rem;
+        }
+        input {
+            font-size: .5rem;
         }
     }
 </style>

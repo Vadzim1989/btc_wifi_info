@@ -56,10 +56,11 @@
             width: 8.5vw;
         }
         li a {
-            padding: 1% 2%;
+            padding: 1% 1%;
         }
         .nav_wrapper {
             margin-right: 1%;
+            overflow-x: hidden;
         }
     }
 </style>
