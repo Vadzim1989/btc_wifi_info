@@ -18,6 +18,34 @@
   import Navigation from '@/components/Navigation';
   export default {
     name: 'App',
+    data() {
+      return {
+        cities: {
+          gomel: 'Гомель',
+          vetka: 'Ветка',
+          chechersk: 'Чечерск',
+          dobrush: 'Добруш',
+          jlobin: 'Жлобин',
+          buda: 'Буда-Кошелево',
+          korma: 'Корма',
+          rogachev: 'Рогачев',
+          rechica: 'Речица',
+          svetlogorsk: 'Светлогорск',
+          bragin: 'Брагин',
+          kalinkovichi: 'Калинковичи',
+          hoiniki: 'Хойники',
+          loev: 'Лоев',
+          petrikov: 'Петриков',
+          mozir: 'Мозырь',
+          jitkovichi: 'Житковичи',
+          elsk: 'Ельск',
+          narovlya: 'Наровля',
+          lelchici: 'Лельчицы',
+          october: 'Октябрьский',
+          gomelzues: 'Гомельский'
+        }
+      }
+    },
     components: {
       TitulsPage,
       Navigation

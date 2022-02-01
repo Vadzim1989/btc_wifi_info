@@ -37,6 +37,9 @@
             $route: 'fetchData'
         },
         created() {
+            this.$on('set-year', year => {
+                this.filterYear = this.filterYear == year ? null : year // второй клик - сброс
+            }) // ловим событие от body
             this.fetchData()
         },
         methods: {

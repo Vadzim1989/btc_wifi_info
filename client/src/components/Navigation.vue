@@ -2,29 +2,8 @@
     <div class="nav_wrapper">
         <img src="../assets/logo_btk.png" alt="logo_btk">
         <ul class='nav'>
-            <li><router-link to='/ '>Гомельский филиал</router-link></li>
-            <li><router-link to='/gomel'>Гомель</router-link></li>
-            <li><router-link to='/vetka'>Ветка</router-link></li>
-            <li><router-link to='/chechersk'>Чечерск</router-link></li>
-            <li><router-link to='/dobrush'>Добруш</router-link></li>
-            <li><router-link to='/jlobin'>Жлобин</router-link></li>
-            <li><router-link to='/buda'>Буда-Кошелево</router-link></li>
-            <li><router-link to='/korma'>Корма</router-link></li>
-            <li><router-link to='/rogachev'>Рогачев</router-link></li>
-            <li><router-link to='/rechica'>Речица</router-link></li>
-            <li><router-link to='/svetlogorsk'>Светлогорск</router-link></li>
-            <li><router-link to='/bragin'>Брагин</router-link></li>
-            <li><router-link to='/kalinkovichi'>Калинковичи</router-link></li>
-            <li><router-link to='/hoiniki'>Хойники</router-link></li>
-            <li><router-link to='/loev'>Лоев</router-link></li>
-            <li><router-link to='/petrikov'>Петриков</router-link></li>
-            <li><router-link to='/mozir'>Мозырь</router-link></li>
-            <li><router-link to='/jitkovichi'>Житковичи</router-link></li>
-            <li><router-link to='/elsk'>Ельск</router-link></li>
-            <li><router-link to='/narovlya'>Наровля</router-link></li>
-            <li><router-link to='/lelchici'>Лельчицы</router-link></li>
-            <li><router-link to='/october'>Октябрьский</router-link></li>
-            <li><router-link to='/gomelzues'>Гомельский</router-link></li>
+            <li><router-link to="/ ">Гомельский филиал</router-link></li>
+            <li v-for="(name, link, index) in $parent.cities" :key="index"><router-link :to="'/'+link">{{name}}</router-link></li>
         </ul>
     </div>
 </template>

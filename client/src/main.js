@@ -5,6 +5,7 @@ import excel from 'vue-excel-export'
 
 Vue.config.productionTip = false
 Vue.use(excel);
+document.title = "Информация по объектам титульного строительства"
 
 
 // Регистрируем глобальную пользовательскую директиву `v-afocus`

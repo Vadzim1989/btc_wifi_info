@@ -3,7 +3,10 @@
         <td class="tdNum td-id">{{tituls.id_adr}}</td>
         <td>{{tituls.zues}}</td>
         <td class="td-name">{{tituls.name_titul}}</td>
-        <td class="tdNum">{{tituls.god_vvod}}</td>
+        <td class="tdNum tdYear" 
+            @click="$parent.$parent.$emit('set-year', tituls.god_vvod)">
+                {{tituls.god_vvod}}
+        </td>
         <td class="tdNum">{{tituls.all_socket}}</td>
         <td class="tdNum">{{tituls.check_socket}}</td>
         <td class="tdNum">{{tituls.kv_all}}</td>
@@ -33,5 +36,10 @@ export default {
 <style>
     .tdNum {
         width: 3%;
+    }
+    .tdYear:hover {
+        cursor: pointer;
+        background-color: #00eeff;
+        font-weight: bold;
     }
 </style>
