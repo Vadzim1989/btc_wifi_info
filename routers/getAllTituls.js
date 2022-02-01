@@ -10,6 +10,8 @@ async function querySelect() {
     const statement = await connection.createStatement();
     await statement.prepare(`select * from gomel:${name} order by id_adr`);
     const result = await statement.execute();
+    await statement.close();
+    await connection.close();
     return result;
 }
 
@@ -18,7 +20,7 @@ async function getResult () {
     return queryResult;
 }
 
-router.get('/all', async (req, res) => {
+router.get('/', async (req, res) => {
     const result = await getResult();  
     res.json(result);
 })

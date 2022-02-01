@@ -10,6 +10,8 @@ async function querySelect() {
     const statement = await connection.createStatement();
     await statement.prepare(`select * from gomel:${name} where zues = "РЕЧИЦКИЙ" order by id_adr`);
     const result = await statement.execute();
+    await statement.close();
+    await connection.close();
     return result;
 }
 
