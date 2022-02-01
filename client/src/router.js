@@ -10,6 +10,10 @@ export default new Router ({
             path: '/:city',
             component: () => import('./views/TitulInfo'),
             props: true
+        },
+        {
+            path: '*',
+            component: () => import('./views/NotFoundPage')
         }
     ]
 })

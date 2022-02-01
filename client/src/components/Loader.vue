@@ -5,8 +5,8 @@
 <style>
 .lds-dual-ring {
   position: absolute;
-  top: 50vh;
-  left: 50vw;
+  top: 30vh;
+  left: 50.5vw;
   width: 80px;
   height: 80px;
 }

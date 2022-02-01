@@ -36,7 +36,7 @@
 <style>
     table{
         border-collapse: collapse;
-        max-width: 89vw;
+        max-width: 91.5vw;
         width: 100%;
         margin-left: 1.5%;
         margin-bottom: 20px;
@@ -82,11 +82,12 @@
         font-weight: bold;
     }
     .td-name {
-        padding: 0 0 0 5px;
+        padding: .4% .4%;
         font-weight: 500;
     }
     .tdNum {
         text-align: center;
+        font-size: .8rem;
     }
     .table_wrapper {
         flex: 1 1 87%;
@@ -97,7 +98,8 @@
     .btn_excel {
         margin-left: 1%;
         cursor: pointer;
-        max-width: 2%;
+        max-width: 1.1%;
+        padding-left: .5%;
     }
     .btn_excel:hover {
         transform: scale(1.2);
@@ -108,8 +110,11 @@
     }
     @media screen and (max-width:1850px){
         table {
-            font-size: .65rem;
+            font-size: .6rem;
             margin-left: 0;
+        }
+        .tdNum {
+            font-size: .6rem;
         }
     }
 </style>

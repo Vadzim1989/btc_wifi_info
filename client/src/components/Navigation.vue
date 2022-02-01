@@ -1,5 +1,6 @@
 <template>
     <div class="nav_wrapper">
+        <img src="../assets/logo_btk.png" alt="logo_btk">
         <ul class='nav'>
             <li><router-link to='/ '>Гомельский филиал</router-link></li>
             <li><router-link to='/gomel'>Гомель</router-link></li>
@@ -34,28 +35,32 @@
         overflow-y: auto;
     }
     ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 6vw;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 6vw;
     }
 
     li a {
-    display: block;
-    color: #000;
-    padding: 4% 8%;
-    text-decoration: none;
-    background-color: #dbf1ff;
-    font-size: .8rem;
-    border-bottom: 2px solid black;
+        display: block;
+        color: #000;
+        padding: 4% 8%;
+        text-decoration: none;
+        background-color: #dbf1ff;
+        font-size: .8rem;
+        border-bottom: 2px solid black;
+    }
+    
+    li:first-child {
+        border-top: 2px solid black;
     }
 
     li a:hover {
-    background-color: #b7e69a;
-    color: #727171;    
-    font-weight: 500;
-    border-left: 5px solid #2f9ed1;
-    transition: .3s all linear;
+        background-color: #b7e69a;
+        color: #727171;    
+        font-weight: 500;
+        border-left: 5px solid #2f9ed1;
+        transition: .3s all linear;
     }
 
     ul a.router-link-exact-active {
