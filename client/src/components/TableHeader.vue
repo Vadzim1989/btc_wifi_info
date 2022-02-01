@@ -6,10 +6,11 @@
             <th><input  type="text" 
                         placeholder="Имя титула"
                         v-afocus
-                        v-mfocus
+                        v-mfocus                        
                         v-model="$parent.$parent.filterName"
                         @keydown.esc="$parent.$parent.filterName=''"></th>
-            <th><input  type="number" 
+            <th><input  type="number"
+                        class="input_number"
                         placeholder="Год"
                         min="2000"
                         v-mfocus
@@ -31,6 +32,7 @@
         </tr>
     </thead>
 </template>
+
 
 <style scoped>
     input {

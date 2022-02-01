@@ -41,6 +41,7 @@
         },
         methods: {
             fetchData() {
+                this.loading = true;
                 fetch(`http://10.245.3.132:99/api/titulinfo/${this.$route.params.city}`)
                 .then(response => response.json())
                 .then(json => {

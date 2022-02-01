@@ -29,3 +29,9 @@ export default {
     }
 }
 </script>
+
+<style>
+    .tdNum {
+        width: 3%;
+    }
+</style>
