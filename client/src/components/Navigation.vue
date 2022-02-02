@@ -2,7 +2,6 @@
     <div class="nav_wrapper">
         <img src="../assets/logo_btk.png" alt="logo_btk">
         <ul class='nav'>
-            <li><router-link to="/ ">Гомельский филиал</router-link></li>
             <li v-for="(name, link, index) in $parent.cities" :key="index"><router-link :to="'/'+link">{{name}}</router-link></li>
         </ul>
     </div>

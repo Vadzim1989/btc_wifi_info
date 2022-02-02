@@ -20,7 +20,7 @@ async function getResult () {
     return queryResult;
 }
 
-router.get('/', async (req, res) => {
+router.get('/all', async (req, res) => {
     const result = await getResult();  
     res.json(result);
 })

@@ -12,6 +12,10 @@ export default new Router ({
             props: true
         },
         {
+            path: '/',
+            component: () => import('./views/HomePage')
+        },
+        {
             path: '*',
             component: () => import('./views/NotFoundPage')
         }

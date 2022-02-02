@@ -21,6 +21,7 @@
     data() {
       return {
         cities: {
+          all: 'Гомельский филиал',
           gomel: 'Гомель',
           vetka: 'Ветка',
           chechersk: 'Чечерск',

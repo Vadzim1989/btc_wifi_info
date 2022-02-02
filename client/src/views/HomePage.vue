@@ -1,7 +1,7 @@
 <template>
     <div class="not_page_wrapper">        
         <div class="not_page">
-            <h1>Страница не найдена!</h1>
+            <h1>Добро пожаловать!</h1>
             <router-link to='/all'>Начать работу</router-link>
         </div>
     </div>
