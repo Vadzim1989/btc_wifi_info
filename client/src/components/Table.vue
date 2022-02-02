@@ -3,7 +3,7 @@
         <export-excel
             class='btn_excel'
             :data='tituls'
-            :name="tituls_info.xls">
+            name="tituls_info.xls">
             <img src="../assets/down_excel.png" alt="excel_download" class="down_logo">
         </export-excel>
         <table>

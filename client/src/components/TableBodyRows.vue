@@ -1,5 +1,5 @@
 <template>
-    <tr key='{{tituls.id_adr}}'>
+    <tr :key="tituls.id_adr">
         <td class="tdNum td-id">{{tituls.id_adr}}</td>
         <td>{{tituls.zues}}</td>
         <td class="td-name">{{tituls.name_titul}}</td>
@@ -26,8 +26,7 @@
 export default {
     props: {
         tituls: {
-            type: Object,
-            required: true
+            type: Object
         }
     }
 }
