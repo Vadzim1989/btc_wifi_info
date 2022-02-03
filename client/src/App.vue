@@ -4,7 +4,7 @@
       <span class="tooltiptext">Вадим Денисовский, инженер-программист ИВЦ</span>
     </div>
     <div class="header">
-      <h1>Информация по объектам титульного строительства. XPON</h1>
+      <h1>Информация по точкам wi-fi по организациям</h1>
     </div>
     <div class="main">
       <Navigation/>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-  import TitulsPage from './views/TitulInfo.vue';
+  import WifiPage from './views/WifiInfo.vue';
   import Navigation from '@/components/Navigation';
   export default {
     name: 'App',
@@ -48,7 +48,7 @@
       }
     },
     components: {
-      TitulsPage,
+      WifiPage,
       Navigation
     }
   }

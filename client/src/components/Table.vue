@@ -2,19 +2,19 @@
     <div class="table_wrapper">
         <export-excel
             class='btn_excel'
-            :data='tituls'
-            name="tituls_info.xls">
+            :data='wifi'
+            name="wifi_info.xls">
             <img src="../assets/down_excel.png" alt="excel_download" class="down_logo">
         </export-excel>
         <table>
             <TableHeader ref="thead"/>
             <tbody>
                 <TableBodyRows 
-                    v-bind:tituls='tituls'
-                    v-for="tituls in tituls" :key="tituls.id_adr"/>
+                    v-bind:wifi='wifi'
+                    v-for="wifi in wifi" :key="wifi.ab_code"/>
             </tbody>
             <TableFooter
-                v-bind:tituls='tituls'/>
+                v-bind:wifi='wifi'/>
         </table>
     </div>
 </template>
@@ -24,7 +24,7 @@
     import TableBodyRows from '@/components/TableBodyRows';
     import TableFooter from '@/components/TableFooter';
     export default {
-        props: ['tituls'],
+        props: ['wifi'],
         components: {
             TableHeader,
             TableBodyRows,
@@ -59,7 +59,6 @@
         background: #2f9ed1;
     }
     table td{
-        padding: 3px 2px;
         text-align: left;
     }
     table tbody tr:nth-child(odd){
@@ -77,11 +76,10 @@
         font-weight: 500;
         padding: 5px;
         background: #2f9ed1;
-    }
-    .td-id {
-        font-weight: bold;
+        font-size: 1rem;
     }
     .td-name {
+        text-align: center;
         padding: .4% .4%;
         font-weight: 500;
     }

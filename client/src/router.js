@@ -8,7 +8,7 @@ export default new Router ({
     routes: [
         {
             path: '/:city',
-            component: () => import('./views/TitulInfo'),
+            component: () => import('./views/WifiInfo'),
             props: true
         },
         {

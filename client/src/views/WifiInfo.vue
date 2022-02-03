@@ -1,7 +1,7 @@
 <template>
     <Loader v-if="loading"/>  
-        <Table  v-else-if="tituls.length"
-                v-bind:tituls='filteredTituls'
+        <Table  v-else-if="wifi.length"
+                v-bind:wifi='filteredWifi'
                 />
     <p v-else>Данных нету!</p>
 </template>
@@ -11,25 +11,24 @@
     import Loader from '@/components/Loader';
 
     export default {
-        name: 'TitulInfo',
+        name: 'WifiInfo',
         components: {
             Table,
             Loader
         },
         data() {
             return {
-                tituls: [],
+                wifi: [],
                 loading: true,
-                filterName: '',
-                filterYear: null
+                filterName: ''
             }
         },
         computed: { 
-            filteredTituls() {
-                if(!this.tituls.length) return this.tituls;
+            filteredWifi() {
+                if(!this.wifi.length) return this.wifi;
                 let fn = RegExp(`${this.filterName}|${this.en2ru(this.filterName)}`, 'i');
-                return this.tituls.filter(t => {
-                    return (!fn || t.name_titul.match(fn)) && (!this.filterYear || t.god_vvod == this.filterYear);
+                return this.wifi.filter(w => {
+                    return (!fn || w.firm_name.match(fn));
                 })
             } // filtered our data
         },
@@ -37,19 +36,16 @@
             $route: 'fetchData'
         },
         created() {
-            this.$on('set-year', year => {
-                this.filterYear = this.filterYear == year ? null : year // второй клик - сброс
-            }) // ловим событие от body
             this.fetchData()
         },
         methods: {
             fetchData() {
                 this.loading = true;
-                fetch(`http://10.245.3.132:99/api/titulinfo/${this.$route.params.city}`)
+                fetch(`http://10.245.3.132:100/api/wifiinfo/${this.$route.params.city}`)
                 .then(response => response.json())
                 .then(json => {
                         setTimeout(() => {
-                            this.tituls = json
+                            this.wifi = json
                             this.loading = false
                     },100);
                 })
