@@ -10,7 +10,7 @@
 <style>
     .not_page_wrapper {
         background: rgb(174,214,238);
-        background: radial-gradient(circle, rgba(174,214,238,1) 0%, rgba(148,233,232,1) 100%);
+        background: radial-gradient(circle, rgb(208, 238, 174) 0%, rgba(148,233,232,1) 100%);
         position: relative;
         left: 2%;
         max-width: 100%;
@@ -29,7 +29,7 @@
         padding: 2%;
     }
     .not_page a:hover {
-        background-color: #94fd94;
+        background-color: #94cafd;
         color: black;
     }
     @media screen and (max-width:1840px) {

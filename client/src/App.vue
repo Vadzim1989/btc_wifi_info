@@ -4,7 +4,7 @@
       <span class="tooltiptext">Вадим Денисовский, инженер-программист ИВЦ</span>
     </div>
     <div class="header">
-      <h1>Информация по точкам wi-fi по организациям</h1>
+      <h1>Информация по точкам <span class="wifi">wi-fi</span> по организациям</h1>
     </div>
     <div class="main">
       <Navigation/>
@@ -61,7 +61,7 @@ body{
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-y: hidden;
-  background-color: #dbf1ff;
+  background-color: #dbffde;
 }
 #app {
   display: flex;
@@ -103,6 +103,18 @@ body{
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
+}
+
+.wifi {  
+  font-family: 'Rubik One', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  background: #2E2F45;
+  margin: 20px auto;
+  color: white;
+  border-radius: 5px;
+  mix-blend-mode: multiply;
+  padding: 5px 10px;
 }
 
 @media screen and (max-width:1100px) {

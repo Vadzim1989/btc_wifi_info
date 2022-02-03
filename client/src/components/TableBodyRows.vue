@@ -1,5 +1,5 @@
 <template>
-    <tr :key="wifi.ab_code">
+    <tr>
         <td class="td-zues">{{wifi.zues}}</td>
         <td class="td-name">{{wifi.firm_name}}</td>
         <td class="tdNum">{{wifi.ab_code}}</td>
@@ -22,5 +22,8 @@ export default {
 <style>
     .tdNum {
         width: 15%;
+    }
+    .td-zues {
+        padding-left: .5%;
     }
 </style>

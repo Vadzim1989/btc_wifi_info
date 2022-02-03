@@ -11,7 +11,7 @@
             <tbody>
                 <TableBodyRows 
                     v-bind:wifi='wifi'
-                    v-for="wifi in wifi" :key="wifi.ab_code"/>
+                    v-for="(wifi, index) in wifi" :key="index"/>
             </tbody>
             <TableFooter
                 v-bind:wifi='wifi'/>
@@ -56,7 +56,7 @@
     table th {
         font-weight: 500;
         padding: 5px;
-        background: #2f9ed1;
+        background: #78a04a;
     }
     table td{
         text-align: left;
@@ -65,7 +65,7 @@
         background: #fff;
     }
     table tbody tr:nth-child(even){
-        background: #c5f3fcfd
+        background: #acc796fd
     }
     table tfoot {
         position: sticky;
@@ -75,7 +75,7 @@
     table tfoot tr{
         font-weight: 500;
         padding: 5px;
-        background: #2f9ed1;
+        background: #78a04a;
         font-size: 1rem;
     }
     .td-name {
