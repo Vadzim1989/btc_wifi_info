@@ -20,7 +20,9 @@
             return {
                 wifi: [],
                 loading: true,
-                filterName: ''
+                filterName: '',
+                filterABcode: null,
+                filterUnp: null
             }
         },
         computed: { 
@@ -28,7 +30,9 @@
                 if(!this.wifi.length) return this.wifi;
                 let fn = RegExp(`${this.filterName}|${this.en2ru(this.filterName)}`, 'i');
                 return this.wifi.filter(w => {
-                    return (!fn || w.firm_name.match(fn));
+                    return (!fn || w.firm_name.match(fn)) 
+                            && (!this.filterABcode || w.ab_code == this.filterABcode) 
+                            && (!this.filterUnp || w.unp == +this.filterUnp);
                 })
             } // filtered our data
         },
@@ -36,7 +40,13 @@
             $route: 'fetchData'
         },
         created() {
-            this.fetchData()
+            this.$on('set-abcode', abcode => {
+                this.filterABcode = this.filterABcode == abcode ? null : abcode // второй клик - сброс
+            }); // ловим событие от body
+            this.$on('set-unp', unp => {
+                this.filterUnp = this.filterUnp == +unp ? null : +unp // второй клик - сброс
+            }); // ловим событие от body
+            this.fetchData();
         },
         methods: {
             fetchData() {

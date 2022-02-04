@@ -75,7 +75,8 @@ body{
 }
 .header{
   text-align: center;
-  font-size: 1rem;
+  font-size: .8rem;
+  margin-top: -1.3%;
 }
 
 .tooltip {
@@ -107,7 +108,7 @@ body{
 
 .wifi {  
   font-family: 'Rubik One', sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   text-transform: uppercase;
   background: #2E2F45;
   margin: 20px auto;
