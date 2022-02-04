@@ -5,6 +5,7 @@ import excel from 'vue-excel-export'
 
 Vue.config.productionTip = false
 Vue.use(excel);
+Vue.config.devtools = true;
 
 
 // Регистрируем глобальную пользовательскую директиву `v-afocus`
