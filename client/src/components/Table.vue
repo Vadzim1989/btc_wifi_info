@@ -3,6 +3,7 @@
         <export-excel
             class='btn_excel'
             :data='wifi'
+            :fields="json_fields"
             name="wifi_info.xls">
             <img src="../assets/down_excel.png" alt="excel_download" class="down_logo">
         </export-excel>
@@ -25,6 +26,19 @@
     import TableFooter from '@/components/TableFooter';
     export default {
         props: ['wifi'],
+        data() {
+            return {
+                json_fields: {
+                'Структурное подразделение': 'zues',
+                'Код абонента': 'ab_code',
+                'Название организации': 'firm_name',
+                'УНП': 'unp',
+                'Количество точек': 'count',
+                'Код услуги': 'serv_id_code',
+                'Название услуги': 'serv_name'
+                }
+            }
+        },
         components: {
             TableHeader,
             TableBodyRows,
