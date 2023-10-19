@@ -10,13 +10,11 @@
                         @keydown.esc="$parent.$parent.filterName=''"></th>
             <th><input  type="number" 
                         placeholder="Код абонента"
-                        v-afocus
                         v-mfocus                        
                         v-model="$parent.$parent.filterABcode"
                         @keydown.esc="$parent.$parent.filterABcode=''"></th>
             <th><input  type="number" 
                         placeholder="УНП"
-                        v-afocus
                         v-mfocus                        
                         v-model="$parent.$parent.filterUnp"
                         @keydown.esc="$parent.$parent.filterUnp=''"></th>

@@ -1,8 +1,8 @@
 <template>
     <tfoot>
         <tr>
-            <td colspan="5">Всего: органиций - {{uniqueAbcode(wifi)}} точек wi-fi - {{arraySum(wifi.map(({count}) => count))}} из них Cisco - {{countCisco(wifi, "СISCO")}}</td>
-            <td class="tdNum">{{arraySum(wifi.map(({count}) => count))}}</td>
+            <td colspan="5">Всего: органиций - {{uniqueAbcode(wifi)}} точек wi-fi - {{wifi.reduce((sum, {count}) => {return sum + count},0)}} из них Cisco - {{countCisco(wifi, "СISCO") + countCisco(wifi, "FREE")}}</td>
+            <td class="tdNum">{{wifi.reduce((sum, {count}) => {return sum + count},0)}}</td>
         </tr>
     </tfoot>
 </template>
@@ -11,13 +11,6 @@
 export default {
     props: ['wifi'],
     methods: {
-        arraySum(array) {
-            let sum = 0;
-            for(var i = 0; i < array.length; i++){
-                sum += array[i];
-            }
-            return sum
-        },
         countCisco(array, str) {
             const cisco = array.filter(w => w.serv_name.match(str));
             const ciscoCnt = cisco.map(({count}) => count);
@@ -30,8 +23,8 @@ export default {
         uniqueAbcode(array) {
             const abcodeCnt = array.map(({ab_code}) => ab_code);
             const abcodeSet = new Set(abcodeCnt);
-            const arr = [...abcodeSet]
-            return arr.length;
+            const AbCode = [...abcodeSet]
+            return AbCode.length;
         }
     },
 }

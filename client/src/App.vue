@@ -4,7 +4,7 @@
       <span class="tooltiptext">Вадим Денисовский, инженер-программист ИВЦ</span>
     </div>
     <div class="header">
-      <h1>Информация по точкам <span class="wifi">wi-fi</span> по организациям</h1>
+      <h1>Автоматизированный процес сбора информации по точкам <span class="wifi">Wi-Fi</span></h1>
     </div>
     <div class="main">
       <Navigation/>

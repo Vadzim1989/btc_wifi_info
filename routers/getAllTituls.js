@@ -1,6 +1,7 @@
 const express = require('express');
 const db = require('odbc');
 const cs = require('config').get('informixURL');
+const services = require('config').get('services');
 
 const router = express.Router();
 
@@ -12,7 +13,8 @@ async function querySelect() {
                                                     b.pay_num unp, 
                                                     a.amount count,
                                                     c.serv_id_code,
-                                                    c.serv_name
+                                                    c.serv_name,
+                                                    a.phone
                                             from    ratsg:a14 a,
                                                     ratsg:a2 b,
                                                     ratsg:a10 c,
@@ -23,9 +25,9 @@ async function querySelect() {
                                             and     a.ext_rek = 5
                                             and     substr(a.ab_code,1,2) = d.kod
                                             and     d.kodi = "S112"
-                                            and     c.serv_id_code in (10570,11341,11342,11343,11344,11345,11023,11024,11025,11026,11027,283,11570)
-                                            group by 1,2,3,4,5,6,7
-                                            order by 1,2,3,4,5,6,7`);
+                                            and     c.serv_id_code in (${services})
+                                            group by 1,2,3,4,5,6,7,8
+                                            order by 1,2,3,4,5,6,7,8`);
     await connection.close();
     return result;
 }
@@ -41,3 +43,5 @@ router.get('/all', async (req, res) => {
 })
 
 module.exports = router;
+
+//15705,15717,15707,15708,15709,15710,15718,15711,15713,15714,15723,15720,15715,15719
